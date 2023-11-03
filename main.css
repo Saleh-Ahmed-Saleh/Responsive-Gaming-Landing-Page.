@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url("https://db.onlinewebfonts.com/t/3066b11123e63381b8e2aa554b18bf32.eot?#iefix");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #ff0000;
+}
+
+body{
+    position: relative;
+    background: #000000;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background:rgb(255, 255, 255, 0.1); 
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+    z-index: 20;
+}
+
+.logo img{
+    max-width: 40px;
+    filter:invert(1);
+    -webkit-filter:invert(1);
+}
+
+.menu{
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+header nav #btnM{
+display: none;
+}
+body > header > nav > ul{
+    display: flex;
+    list-style: none;
+}
+
+body > header > nav > ul > li > a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 4px 10px;
+    font-size: 0.8em;
+    align-items: center;
+    list-style: none;
+    margin: 0 20px;
+    align-items: center;
+}
+
+body > header > nav > ul > li:hover a{
+    color: var(--primary);
+}
+
+
+.search{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.search:hover{
+    width: 300px;
+}
+
+.search input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0 10px 0 5px;
+    backdrop-filter: blur(10px);
+}
+
+.search input::placeholder{
+    color: #ffffff;
+    text-transform: capitalize;
+    transform: translateX(5px);
+    font-weight: 300; 
+}
+
+.search ion-icon{
+    font-size: 1.4em;
+    position: absolute;
+    top: 50%;
+    color: #ffffff;
+    transform: translateY(-50%);
+    right: 10px;
+    padding-left: 10px;
+    border-left: 1px solid rgb(255,255, 255,0.5);
+}
+
+.swiper{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.swiper .swiper-wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.swiper .swiper-wrapper .swiper-slide{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.swiper .swiper-wrapper .swiper-slide::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0,0.6);
+}
+
+
+.swiper .swiper-wrapper .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+}
+
+.swiper-button-next{
+    position: absolute;
+    right: 6%;
+    top: 40%;
+    width: 54px;
+    height: 54px;
+
+}
+
+.swiper-button-prev{
+    position: absolute;
+    left: 75%;
+    top: 40%;
+    width: 54px;
+    height: 54px;
+    
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after{
+    font-size: 30px;
+    line-height: 0;
+    width: 54px;
+    height: 54px;
+    background: transparent;
+    border-radius: 50%;
+    transition: 0.3s;
+    color: 1px solid rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper .swiper-button-next:hover,
+.swiper .swiper-button-prev:hover{
+    border-radius: 50%;
+    background: rgb(255, 255, 255, 0.3);
+    color:rgb(255, 255, 255, 0.8);
+}
+
+.swiper .swiper-pagination{
+    max-height: 20px;
+    position: absolute;
+    left: 70%;
+    top: 41%;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: rgb(255, 255, 255, 0.8);
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 100px 0;
+    overflow: hidden;
+    background: transparent;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,5%);
+    max-width: 410px;
+    cursor: pointer;r;
+}
+
+.swiper .swiper-wrapper .swiper-slide .backscene{
+    position: absolute;
+    content: "";
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    box-shadow: inset 0 0 25px rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 20;
+}
+
+
+.banner .left .features{
+    max-width: 400px;
+    margin-bottom: 150px;
+    transform: translate(0, 10%) ;
+    -webkit-transform: translate(0, 10%) ;
+    -moz-transform: translate(0, 10%) ;
+    -ms-transform: translate(0, 10%) ;
+    -o-transform: translate(0, 10%) ;
+}
+
+
+.banner .left .features .rating{
+    color:#ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+    
+}
+
+
+.banner .left .features .rating .score{
+    padding: 15px;
+    font-size: 2em;
+    font-weight: 400;
+    color: var(--primary);
+    background: #ffffff;
+} 
+
+.banner .left .features .content{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    text-align: center;
+} 
+
+
+.banner .left .features .pricing{
+    color: #ffffff;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+} 
+
+.banner .left .features .pricing ion-icon{
+    padding: 15px;
+    font-size: 3em;
+    font-weight: 400;
+    color: #ffffff;
+    background: rgb(255, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.3s;
+} 
+
+
+.banner .left .features .pricing ion-icon:hover{
+    background: rgb(255, 0, 0, 0.9);
+} 
+
+
+.banner .left .features .content h4{
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+} 
+
+
+.banner .left .features .content span{
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.banner .left .features .content .subtitle{
+    color: var(--primary);
+}
+.banner h1{
+    color: #ffffff;
+    font-size: 6em;
+    letter-spacing: 1px;
+    line-height: 0.9;
+    z-index: 1000;
+    text-transform: uppercase;
+    font-family: "Bauhaus 93";
+    cursor: pointer;
+    text-align: left;
+    transform: translate(-10%,-25%);
+    -webkit-transform: translate(-10%,-25%);
+    -moz-transform: translate(-10%,-25%);
+    -ms-transform: translate(-10%,-25%);
+    -o-transform: translate(-10%,-25%);
+}
+
+
+.banner h1:hover{
+    color: var(--primary);
+}
+
+
+.swiper .swiper-wrapper .swiper-slide .banner .right{
+    position: relative;
+    height: 100vh;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+
+.banner .right .description{
+    color: #ffffff;
+    transform: translate(10%, 10%) ;
+    padding: 0 40px;
+    -webkit-transform: translate(22%, 10%) ;
+    -moz-transform: translate(10%, 10%) ;
+    -ms-transform: translate(10%, 10%) ;
+    -o-transform: translate(10%, 10%) ;
+}
+
+.banner .right .description li{
+    list-style: none;
+}
+
+
+.banner .right .description h4{
+    display: inline-block;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    
+}
+
+.banner .right .description h4 ion-icon{
+    margin-right: 5px;
+}
+
+.banner .right .description p{
+    color: #ffffff;
+    font-size: 0.7em;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 3px 17px;
+}
+
+.banner .right .trailer{
+    transform: translate(10%,10%);
+    -webkit-transform: translate(10%,10%);
+    -moz-transform: translate(10%,10%);
+    -ms-transform: translate(10%,10%);
+    -o-transform: translate(10%,10%);
+}
+
+.banner .right iframe{
+    max-width: 250px;
+    max-height: 250px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    z-index: 2400;
+}
+
+
+.banner .right .trailer h2{
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.banner .right .trailer h2:hover{
+    color: var(--primary);
+}
+
+.sci{
+    position: absolute;
+    left: 100px;
+    bottom: 10px;
+    display: flex;
+    gap: 20px;
+    z-index: 200;
+}
+
+.sci ion-icon {
+    color: #ffffff;
+    font-size: 1.8em;
+    padding: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.sci ion-icon:hover {
+    color: rgb(255, 0, 0, 0.6)
+}
+.sci li {
+    list-style: none;
+}
+
+h6{
+    position: absolute;
+    font-size: 0.7em;
+    color: #ffffff;
+    bottom: 2px;
+    left: 6%;
+    z-index: 200;
+    font-weight: 400;
+    color: #ffffff;
+    background: rgb(255, 0, 0, 0.6);
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+
+
+
+@media (min-width:280px) and (max-width: 600px) {
+    body > header .fa-bars{
+        display: none;
+    }
+    header nav #btnM{ 
+        display: block;
+        color: #ffffff;
+        font-size: 28px;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    body header nav .nav-link{
+        position: absolute;
+        top: -120vh !important;
+        width: 120%;
+        height:100vh;
+        text-align: center;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 40px;
+        transform: translate(-50%,1%);
+        padding: 40px 0px;
+        background: rgb(255, 255, 255,0.4);
+        backdrop-filter: blur(15px);
+        z-index:10;
+}
+
+    body header nav .nav-link.active{
+        position: absolute;
+        top: 0% !important; 
+        left: 50%; 
+}
+
+    body header nav .nav-link li a{
+        width: 100%;
+        border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+        transition: 0.3s;
+        font-size: 1.5em;
+        text-transform: capitalize;
+}
+.search ion-icon{
+    display: none;
+}
+
+.logo img{
+    transform: translateX(-190%);
+    -webkit-transform: translateX(-190%);
+    -moz-transform: translateX(-190%);
+    -ms-transform: translateX(-190%);
+    -o-transform: translateX(-190%);
+}
+    .banner .left .features{
+        display: none;
+    }
+    body > div > div.swiper-wrapper > div.swiper-slide.swiper-slide-active > div.banner > div.left > h1{
+        font-size: 2em;
+        text-align: center;
+        transform: translate(-20%,-180%);
+
+    }
+    body > div > div.swiper-wrapper > div > div > div:nth-child(1) > div.banner > div.right > div > h2{
+            font-size: 1em;
+            text-align: center;        
+    }
+
+    .banner .right .description{
+        display: none;
+    }
+
+    .swiper .swiper-button-next::after,
+    .swiper .swiper-button-prev::after{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+.swiper-button-next{
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    width: 40px;
+    height: 40px;
+
+}
+
+.swiper-button-prev{
+    position: absolute;
+    left: 65%;
+    top: 30%;
+    width: 40px;
+    height: 40px;
+    
+}
+
+.swiper .swiper-pagination{
+    display: none;
+}
+
+
+    .banner .right .trailer{
+        transform: translate(-110%,40%);
+        -webkit-transform: translate(-110%,40%);
+        -moz-transform: translate(-110%,40%);
+        -ms-transform: translate(-110%,40%);
+        -o-transform: translate(-110%,40%);
+}
+
+
+    .banner .right iframe{
+        max-width: 120px;
+        max-height: 120px;
+        margin-bottom: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--primary);
+    }
+
+
+    .banner .right .trailer h2{
+        font-size: 1em;
+    }
+
+
+    .sci{
+        position: absolute;
+        left: 40px;
+        bottom: 18px;
+    }
+    h6{
+        font-size: 0.8em;
+        color: #ffffff;
+        bottom: 0;
+        left: 0;
+        border-top-right-radius: 30px;
+        padding: 2px 7px;
+}
+
+}  
+
+@media (min-width:768px) and (max-width: 992px) {
+    body > header .fa-bars{
+        
+        display: none;
+        
+    }
+    header nav #btnM{ 
+        display: block;
+        color: #ffffff;
+        font-size: 28px;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    body header nav .nav-link{
+        position: absolute;
+        top: -120vh !important;
+        width: 120%;
+        height:100vh;
+        text-align: center;
+        overflow: scroll;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 40px;
+        transform: translate(-50%,1%);
+        padding: 40px 0px;
+        background: rgb(255, 255, 255,0.4);
+        backdrop-filter: blur(15px);
+}
+
+    body header nav .nav-link.active{
+        position: absolute;
+        top: 80% !important;
+        left: 50%; 
+}
+
+
+    body header nav .nav-link li a{
+        width: 100%;
+        border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+        transition: 0.3s;
+        font-size: 3em;
+        text-transform: capitalize;
+}
+
+    .banner .left .features{
+        display:fixed;
+        transform: translate(-22%,-30%);
+}
+    .swiper .swiper-pagination{
+        display: none;
+    }
+    body > div > div.swiper-wrapper > div > div > div:nth-child(1) > div.banner > div.left > h1{
+        font-size: 3em;
+        text-align: center;
+        transform: translate(0%,-180%);
+    }
+    .banner .right .description h2{
+            font-size: 1.4em;
+            text-align: center;       
+    }
+
+    .banner .right .description{
+        display: fixed;
+        transform: translate(-7%,100%);
+}
+
+.banner .right .description p{
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.233);
+    border-top-left-radius: 30px;
+}
+
+    .banner .right .trailer{
+        transform: translate(-50%,50%);
+    }
+    
+    .banner .right iframe{
+        max-width: 200px;
+        max-height: 120px;
+        border-radius: 10%;
+        border: 1px solid var(--primary);
+        margin: 40px;
+    }
+
+
+
+    .sci{
+        position: absolute;
+        left: 40px;
+        bottom: 30px;
+        font-size: 1.5em;
+    }
+
+    h6{
+        font-size: 1.3em;
+        color: #ffffff;
+        bottom: 0px;
+        left:1px;
+        padding: 2px 20px;
+        border-top-right-radius: 30px;
+        box-shadow: 20px 20px 20px 60px rgb(255, 255, 255, 0.1);
+}
+}  
+    
+
+@media (min-width:767px) and (max-width: 1200px) {
+    .swiper .swiper-wrapper .swiper-slide .banner img{
+        max-width: 400px;
+    }
+    body > div > div.swiper-wrapper > div > div > div:nth-child(1) > div.banner > div.right > div{
+        transform: translate(-30%,90%);
+}
+    
+    body > div > div.swiper-wrapper > div > div > div:nth-child(1) > div.banner > div.right > div > iframe{
+        max-width: 350px;
+        max-height: 250px;
+    }
+
+
+
+body > div > div.swiper-wrapper > div > div > div:nth-child(1) > div.banner > div.left > h1{
+    font-size: 6em;
+    text-align: center;
+    transform: translate(0%,-20%);
+
+}
+}
+
+
+
+
+
+
